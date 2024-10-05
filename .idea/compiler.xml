@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/redisson/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ReEntryLockDemo" />
+        <module name="redis_distributed_reentry_lock" />
+        <module name="untitled" />
+        <module name="redis_distributed_lock" />
+        <module name="redis_distributed_lock2" />
+        <module name="juc-study" />
+        <module name="redisson" />
+        <module name="redis7_study" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ReEntryLockDemo" options="-parameters" />
+      <module name="juc-study" options="-parameters" />
+      <module name="redis-study" options="" />
+      <module name="redis7_study" options="-parameters" />
+      <module name="redis_distributed_lock" options="-parameters" />
+      <module name="redis_distributed_lock2" options="-parameters" />
+      <module name="redis_distributed_reentry_lock" options="-parameters" />
+      <module name="redisson" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+server.port=7777
+
+spring.application.name=redis7_study
+  
+  # ========================logging=====================
+logging.level.root=info
+logging.level.com.atguigu.redis7=info
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger- %msg%n
+
+logging.file.name=D:/mylogs2023/redis7_study.log
+logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger- %msg%n
+  
+  # ========================swagger=====================
+spring.swagger2.enabled=true
+  #在springboot2.6.X结合swagger2.9.X会提示documentationPluginsBootstrapper空指针异常，
+  #原因是在springboot2.6.X中将SpringMVC默认路径匹配策略从AntPathMatcher更改为PathPatternParser，
+  # 导致出错，解决办法是matching-strategy切换回之前ant_path_matcher
+spring.mvc.pathmatch.matching-strategy=ant_path_matcher
+  
+  # ========================redis单机=====================
+spring.redis.database=0
+  # 修改为自己真实IP
+spring.redis.host=192.168.111.185
+spring.redis.port=6379
+spring.redis.password=111111
+spring.redis.lettuce.pool.max-active=8
+spring.redis.lettuce.pool.max-wait=-1ms
+spring.redis.lettuce.pool.max-idle=8
+spring.redis.lettuce.pool.min-idle=0
